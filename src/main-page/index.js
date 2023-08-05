@@ -38,15 +38,15 @@ function App() {
         <Header subtitle={userName} />
         <HouseFilter allHouses={allHouses} />
         <Switch>
+            <Route exact path="/">
+              <FeaturedHouse house={featuredHouse}> </FeaturedHouse>
+            </Route>
             <Route path="/house/:id">
               <HouseFromQuery allHouses={allHouses}/>
             </Route>
             <Route path="/searchresults/:country">
               <SearchResults allHouses={allHouses} />
             </Route>
-            <Route exact path="/">
-              <FeaturedHouse house={featuredHouse}> </FeaturedHouse>
-          </Route>
         </Switch>  
       </div>
     </Router>
