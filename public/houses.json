@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "address": "12 Valley of Kings, Geneva",
+        "country": "Switzerland",
+        "description": "A superb detached Victorian property on one of A superb detached Victorian property on one of the town's finest roads,within easy reach of Barnes Village. The property has in excess of 6000 sq/ft of accommodation, a driveway and landscaped garden.",
+        "price": 900000,
+        "photo": "1111"
+    },
+    {
+        "id": 2,
+        "address": "89 Road of Forks, Bern",
+        "country": "Switzerland",
+        "description": "A superb detached Victorian property on one of A superb detached Victorian property on one of the town's finest roads,within easy reach of Barnes Village. The property has in excess of 6000 sq/ft of accommodation, a driveway and landscaped garden.",
+        "price": 500000,
+        "photo": "2222"
+    },
+    {
+        "id": 3,
+        "address": "12 Valley of Kings, Geneva",
+        "country": "The Nertherlands",
+        "description": "A superb detached Victorian property on one of A superb detached Victorian property on one of the town's finest roads,within easy reach of Barnes Village. The property has in excess of 6000 sq/ft of accommodation, a driveway and landscaped garden.",
+        "price": 500000,
+        "photo": "3333"
+    },
+    {
+        "id": 4,
+        "address": "12 Valley of Kings, Geneva",
+        "country": "The Nertherlands",
+        "description": "A superb detached Victorian property on one of A superb detached Victorian property on one of the town's finest roads,within easy reach of Barnes Village. The property has in excess of 6000 sq/ft of accommodation, a driveway and landscaped garden.",
+        "price": 500000,
+        "photo": "4444"
+    },
+    {
+        "id": 5,
+        "address": "12 Valley of Kings, Geneva",
+        "country": "The Nertherlands",
+        "description": "A superb detached Victorian property on one of A superb detached Victorian property on one of the town's finest roads,within easy reach of Barnes Village. The property has in excess of 6000 sq/ft of accommodation, a driveway and landscaped garden.",
+        "price": 500000,
+        "photo": "5555"
+    }
+
+]
