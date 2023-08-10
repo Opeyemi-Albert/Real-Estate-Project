@@ -1,54 +1,43 @@
 import logo from './logo.svg';
 import './main-page.css';
 import Header from './header';
-import { useEffect, useState, useMemo } from 'react';
 import { BrowserRouter as Router, Switch,  Route} from "react-router-dom";
 import FeaturedHouse from './featured-house';
 import SearchResults from '../search-result';
 import HouseFilter from './house-filter';
 import HouseFromQuery from '../house/HouseFromQuery';
+import useHouses from '../hooks/useHouses';
+import useFeaturedHouses from '../hooks/useFeaturedHouses';
+import HouseContext from '../context/housesContext';
 
 function App() {
-  //using useState
-  const [allHouses, setAllHouses ] = useState([]);
-  
-  //using useEffect
-  useEffect(() => {
-    const fetchHouses = async () => {
-      const rsp = await fetch("./houses.json");
-      const houses = await rsp.json();
-      setAllHouses(houses); 
-    };
-    fetchHouses();
-  }, []);
 
-  //using useMemo
-  const featuredHouse = useMemo(() => {
-    if (allHouses.length){
-      const randomIndex = Math.floor(Math.random() * allHouses.length);
-      return allHouses[randomIndex];
-    }
-  }, [allHouses]);
+  const allHouses = useHouses();
+  const featuredHouse = useFeaturedHouses(allHouses);
   
-
   const userName = "Providing Houses all over the world";
+
+
+
   return (
     <Router>
+      < HouseContext.Provider value={allHouses}>
       <div className="container">
         <Header subtitle={userName} />
-        <HouseFilter allHouses={allHouses} />
+        <HouseFilter />
         <Switch>
             <Route exact path="/">
               <FeaturedHouse house={featuredHouse}> </FeaturedHouse>
             </Route>
             <Route path="/house/:id">
-              <HouseFromQuery allHouses={allHouses}/>
+              <HouseFromQuery />
             </Route>
             <Route path="/searchresults/:country">
-              <SearchResults allHouses={allHouses} />
+              <SearchResults />
             </Route>
         </Switch>  
       </div>
+      </HouseContext.Provider>
     </Router>
   );
 }
